@@ -15,6 +15,9 @@ sed -i -e '/^\*\.sql$/d' ./.gitignore_packlink.new
 # Remove entry that ignores untracked certificates
 sed -i -e '/^\*\.crt$/d' ./.gitignore_packlink.new
 
+# Remove entry that ignores the \config folder
+sed -i -e '/^\/config\/\*$/d' ./.gitignore_packlink.new
+
 # Move the temporary file into the final location
 mv ./.gitignore_packlink.new $HOME/.gitignore_packlink
 
