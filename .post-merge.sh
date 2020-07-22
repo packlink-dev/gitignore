@@ -21,6 +21,9 @@ sed -i -e '/^\/config\/\*$/d' ./.gitignore_packlink.new
 # Remove entry that ignores xml files
 sed -i -e '/^\*\.xml$/d' ./.gitignore_packlink.new
 
+# Remove entry that ignores the test/ folder
+sed -i -e '/^test\/$/d' ./.gitignore_packlink.new
+
 # Move the temporary file into the final location
 mv ./.gitignore_packlink.new $HOME/.gitignore_packlink
 
