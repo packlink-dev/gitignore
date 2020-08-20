@@ -24,6 +24,12 @@ sed -i -e '/^\*\.xml$/d' ./.gitignore_packlink.new
 # Remove entry that ignores the test/ folder
 sed -i -e '/^test\/$/d' ./.gitignore_packlink.new
 
+# Remove entry that ignores the _snapshots_/ folder
+sed -i -e '/^_snapshots_\/$/d' ./.gitignore_packlink.new
+
+# Remove entry that ignores snap files
+sed -i -e '/^\*\.snap$/d' ./.gitignore_packlink.new
+
 # Move the temporary file into the final location
 mv ./.gitignore_packlink.new $HOME/.gitignore_packlink
 
