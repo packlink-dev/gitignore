@@ -30,6 +30,9 @@ sed -i -e '/^_snapshots_\/$/d' ./.gitignore_packlink.new
 # Remove entry that ignores snap files
 sed -i -e '/^\*\.snap$/d' ./.gitignore_packlink.new
 
+# Remove entry that ignores stage/ folder
+sed -i -e '/^stage\/$/d' ./.gitignore_packlink.new
+
 # Move the temporary file into the final location
 mv ./.gitignore_packlink.new $HOME/.gitignore_packlink
 
