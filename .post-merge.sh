@@ -24,6 +24,9 @@ sed -i -e '/^\*\.xml$/d' ./.gitignore_packlink.new
 # Remove entry that ignores the test/ folder
 sed -i -e '/^test\/$/d' ./.gitignore_packlink.new
 
+# Remove entry that ignores the api/ folder
+sed -i -e '/^api$/d' ./.gitignore_packlink.new
+
 # Remove entry that ignores the _snapshots_/ folder
 sed -i -e '/^_snapshots_\/$/d' ./.gitignore_packlink.new
 
